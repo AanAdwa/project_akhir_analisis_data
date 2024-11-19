@@ -96,7 +96,7 @@ def create_byday(df):
      
      return byday_df
 
-data = pd.read_csv('https://github.com/AanAdwa/project_akhir_analisis_data/blob/main/dashboard/hour.csv')
+data = pd.read_csv('../data/hour.csv')
 
 #merubah tipe data dteday ke datetime
 data['dteday'] = pd.to_datetime(data['dteday'])
