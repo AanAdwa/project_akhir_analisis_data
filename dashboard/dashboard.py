@@ -96,7 +96,7 @@ def create_byday(df):
      
      return byday_df
 
-data = pd.read_csv('./hour.csv')
+data = pd.read_csv('../data/hour.csv')
 
 #merubah tipe data dteday ke datetime
 data['dteday'] = pd.to_datetime(data['dteday'])
@@ -162,7 +162,7 @@ ax2[0].pie(
      autopct='%1.1f%%',
      colors=['#DD8452','#55A868'],
 )
-ax2[0].set_title("Distribusi Tipe Pengguna", fontsize=20)
+ax2[0].set_title("Distribusi Tipe Pengguna", fontsize=15)
 
 #barchart byweathersit
 labels = ['Clear, Few clouds, Partly cloudy, Partly cloudy','Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist', 'Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds', 'Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog']
@@ -305,3 +305,5 @@ elif tipe_user == 'casual':
      colors_for_season = [ '#C44E52' if i == byseason_df['avg_casual_user'].idxmax() else  '#4C72B0' for i in range(len(byseason_df))]
      sns.barplot(y=byseason_df['avg_casual_user'], x=byseason_df['season'], data=byseason_df, palette=colors_for_season, ax=ax5[1])
      st.pyplot(fig5)
+
+st.caption('Copy Right ©Adwa Ahmad Al Bayan 2024')
