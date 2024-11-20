@@ -10,7 +10,7 @@ cd project_akhir_analisis_data
 pip install -r requirements.txt
 ```
 
-## Run steamlit app
+## Run streamlit app
 ```
 streamlit run dashboard.py
 ```
